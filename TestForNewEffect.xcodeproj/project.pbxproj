@@ -13,6 +13,13 @@
 		0173C1C41EB9707C0082AED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173C1C21EB9707C0082AED0 /* Main.storyboard */; };
 		0173C1C61EB9707C0082AED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0173C1C51EB9707C0082AED0 /* Assets.xcassets */; };
 		0173C1C91EB9707C0082AED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0173C1C71EB9707C0082AED0 /* LaunchScreen.storyboard */; };
+		018176E31F0486CD00BE4888 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018176E11F0486CD00BE4888 /* ThirdViewController.m */; };
+		018176E41F0486CD00BE4888 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018176E21F0486CD00BE4888 /* ThirdViewController.xib */; };
+		018176E71F048C5100BE4888 /* UIViewController+ShowSuspensionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018176E61F048C5100BE4888 /* UIViewController+ShowSuspensionView.m */; };
+		018176EF1F04947400BE4888 /* TSPSuspensionWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 018176EE1F04947400BE4888 /* TSPSuspensionWindow.m */; };
+		01868AB81F0235D900EEB18A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01868AB61F0235D900EEB18A /* SecondViewController.m */; };
+		01868ABC1F02379200EEB18A /* basic_eye_closed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01868ABA1F02379200EEB18A /* basic_eye_closed@3x.png */; };
+		01868ABD1F02379200EEB18A /* basic_eye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01868ABB1F02379200EEB18A /* basic_eye@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,17 @@
 		0173C1C51EB9707C0082AED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0173C1C81EB9707C0082AED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0173C1CA1EB9707C0082AED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018176E01F0486CD00BE4888 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		018176E11F0486CD00BE4888 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		018176E21F0486CD00BE4888 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		018176E51F048C5100BE4888 /* UIViewController+ShowSuspensionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ShowSuspensionView.h"; sourceTree = "<group>"; };
+		018176E61F048C5100BE4888 /* UIViewController+ShowSuspensionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ShowSuspensionView.m"; sourceTree = "<group>"; };
+		018176ED1F04947400BE4888 /* TSPSuspensionWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPSuspensionWindow.h; sourceTree = "<group>"; };
+		018176EE1F04947400BE4888 /* TSPSuspensionWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPSuspensionWindow.m; sourceTree = "<group>"; };
+		01868AB51F0235D900EEB18A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		01868AB61F0235D900EEB18A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		01868ABA1F02379200EEB18A /* basic_eye_closed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic_eye_closed@3x.png"; sourceTree = "<group>"; };
+		01868ABB1F02379200EEB18A /* basic_eye@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basic_eye@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +76,11 @@
 		0173C1B81EB9707C0082AED0 /* TestForNewEffect */ = {
 			isa = PBXGroup;
 			children = (
-				0173C1BC1EB9707C0082AED0 /* AppDelegate.h */,
-				0173C1BD1EB9707C0082AED0 /* AppDelegate.m */,
-				0173C1BF1EB9707C0082AED0 /* ViewController.h */,
-				0173C1C01EB9707C0082AED0 /* ViewController.m */,
-				0173C1C21EB9707C0082AED0 /* Main.storyboard */,
-				0173C1C51EB9707C0082AED0 /* Assets.xcassets */,
-				0173C1C71EB9707C0082AED0 /* LaunchScreen.storyboard */,
-				0173C1CA1EB9707C0082AED0 /* Info.plist */,
+				018176EB1F04947400BE4888 /* Common */,
+				018176E81F04931900BE4888 /* Category */,
+				01868ABE1F02379600EEB18A /* Icon */,
 				0173C1B91EB9707C0082AED0 /* Supporting Files */,
+				018176E91F04932200BE4888 /* ViewControllers */,
 			);
 			path = TestForNewEffect;
 			sourceTree = "<group>";
@@ -74,9 +88,64 @@
 		0173C1B91EB9707C0082AED0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0173C1BC1EB9707C0082AED0 /* AppDelegate.h */,
+				0173C1BD1EB9707C0082AED0 /* AppDelegate.m */,
+				0173C1C51EB9707C0082AED0 /* Assets.xcassets */,
+				0173C1CA1EB9707C0082AED0 /* Info.plist */,
+				0173C1C71EB9707C0082AED0 /* LaunchScreen.storyboard */,
+				0173C1C21EB9707C0082AED0 /* Main.storyboard */,
 				0173C1BA1EB9707C0082AED0 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		018176E81F04931900BE4888 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				018176E51F048C5100BE4888 /* UIViewController+ShowSuspensionView.h */,
+				018176E61F048C5100BE4888 /* UIViewController+ShowSuspensionView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		018176E91F04932200BE4888 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01868AB51F0235D900EEB18A /* SecondViewController.h */,
+				01868AB61F0235D900EEB18A /* SecondViewController.m */,
+				018176E01F0486CD00BE4888 /* ThirdViewController.h */,
+				018176E11F0486CD00BE4888 /* ThirdViewController.m */,
+				018176E21F0486CD00BE4888 /* ThirdViewController.xib */,
+				0173C1BF1EB9707C0082AED0 /* ViewController.h */,
+				0173C1C01EB9707C0082AED0 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		018176EB1F04947400BE4888 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				018176EC1F04947400BE4888 /* SuspensionWindow */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		018176EC1F04947400BE4888 /* SuspensionWindow */ = {
+			isa = PBXGroup;
+			children = (
+				018176ED1F04947400BE4888 /* TSPSuspensionWindow.h */,
+				018176EE1F04947400BE4888 /* TSPSuspensionWindow.m */,
+			);
+			path = SuspensionWindow;
+			sourceTree = "<group>";
+		};
+		01868ABE1F02379600EEB18A /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				01868ABB1F02379200EEB18A /* basic_eye@3x.png */,
+				01868ABA1F02379200EEB18A /* basic_eye_closed@3x.png */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +179,7 @@
 				TargetAttributes = {
 					0173C1B51EB9707C0082AED0 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = D4R6TBYUVQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,8 +208,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0173C1C91EB9707C0082AED0 /* LaunchScreen.storyboard in Resources */,
+				01868ABD1F02379200EEB18A /* basic_eye@3x.png in Resources */,
+				018176E41F0486CD00BE4888 /* ThirdViewController.xib in Resources */,
 				0173C1C61EB9707C0082AED0 /* Assets.xcassets in Resources */,
 				0173C1C41EB9707C0082AED0 /* Main.storyboard in Resources */,
+				01868ABC1F02379200EEB18A /* basic_eye_closed@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018176EF1F04947400BE4888 /* TSPSuspensionWindow.m in Sources */,
+				01868AB81F0235D900EEB18A /* SecondViewController.m in Sources */,
+				018176E31F0486CD00BE4888 /* ThirdViewController.m in Sources */,
+				018176E71F048C5100BE4888 /* UIViewController+ShowSuspensionView.m in Sources */,
 				0173C1C11EB9707C0082AED0 /* ViewController.m in Sources */,
 				0173C1BE1EB9707C0082AED0 /* AppDelegate.m in Sources */,
 				0173C1BB1EB9707C0082AED0 /* main.m in Sources */,
@@ -165,6 +242,7 @@
 				0173C1C31EB9707C0082AED0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		0173C1C71EB9707C0082AED0 /* LaunchScreen.storyboard */ = {
@@ -173,6 +251,7 @@
 				0173C1C81EB9707C0082AED0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -271,8 +350,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = TestForNewEffect/Info.plist;
+				DEVELOPMENT_TEAM = D4R6TBYUVQ;
+				INFOPLIST_FILE = "TestForNewEffect/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sumavision.TestForNewEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,8 +364,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = TestForNewEffect/Info.plist;
+				DEVELOPMENT_TEAM = D4R6TBYUVQ;
+				INFOPLIST_FILE = "TestForNewEffect/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sumavision.TestForNewEffect;
 				PRODUCT_NAME = "$(TARGET_NAME)";

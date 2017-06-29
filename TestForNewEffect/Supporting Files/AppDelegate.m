@@ -7,16 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "TSPSuspensionWindow.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) TSPSuspensionWindow *suspensionView;
 
 @end
 
 @implementation AppDelegate
 
+- (void)showSuspensionView
+{
+    [self performSelector:@selector(setSuspensionView) withObject:nil afterDelay:1.5];
+}
+
+- (void)setSuspensionView
+{
+    if (_suspensionView == nil) {
+        _suspensionView = [[TSPSuspensionWindow alloc] initWithFrame:CGRectMake(5, 150, 60, 60)];
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [self.window makeKeyWindow];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSuspensionView) name:@"showSuspensionView" object:nil];
     return YES;
 }
 
