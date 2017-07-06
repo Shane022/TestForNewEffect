@@ -79,8 +79,8 @@
 				018176EB1F04947400BE4888 /* Common */,
 				018176E81F04931900BE4888 /* Category */,
 				01868ABE1F02379600EEB18A /* Icon */,
-				0173C1B91EB9707C0082AED0 /* Supporting Files */,
 				018176E91F04932200BE4888 /* ViewControllers */,
+				0173C1B91EB9707C0082AED0 /* Supporting Files */,
 			);
 			path = TestForNewEffect;
 			sourceTree = "<group>";

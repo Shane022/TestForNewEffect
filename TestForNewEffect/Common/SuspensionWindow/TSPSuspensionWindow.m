@@ -45,7 +45,6 @@
 #pragma mark - drag test
 - (void)moveView:(UIPanGestureRecognizer *)gesture
 {
-#if 1
     CGPoint point = [gesture translationInView:self];
     NSLog(@"X:%f;Y:%f",point.x,point.y);
     
@@ -53,60 +52,30 @@
     [gesture setTranslation:CGPointMake(0, 0) inView:self];
     
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     if (gesture.state == UIGestureRecognizerStateEnded) {
-        if (gesture.view.frame.origin.x < screenWidth/2) {
+        // 顶部和底部吸附
+        if (gesture.view.frame.origin.y < 64 || gesture.view.center.y + gesture.view.frame.size.height/2 > screenHeight - 64) {
             [UIView animateWithDuration:0.2 animations:^{
-                [gesture.view setCenter:CGPointMake(gesture.view.frame.size.width/2 + 5, gesture.view.center.y)];
+                if (gesture.view.frame.origin.y < 64) {
+                    [gesture.view setCenter:CGPointMake(gesture.view.center.x, gesture.view.frame.size.height/2)];
+                } else if (gesture.view.center.y + gesture.view.frame.size.height/2 > screenHeight - 64) {
+                    [gesture.view setCenter:CGPointMake(gesture.view.center.x, screenHeight - gesture.view.frame.size.height/2)];
+                }
             }];
         } else {
-            [UIView animateWithDuration:0.2 animations:^{
-                [gesture.view setCenter:CGPointMake(screenWidth - gesture.view.frame.size.width/2 - 5, gesture.view.center.y)];
-            }];
+            // 两侧吸附
+            if (gesture.view.frame.origin.x < screenWidth/2) {
+                [UIView animateWithDuration:0.2 animations:^{
+                    [gesture.view setCenter:CGPointMake(gesture.view.frame.size.width/2 + 5, gesture.view.center.y)];
+                }];
+            } else {
+                [UIView animateWithDuration:0.2 animations:^{
+                    [gesture.view setCenter:CGPointMake(screenWidth - gesture.view.frame.size.width/2 - 5, gesture.view.center.y)];
+                }];
+            }
         }
     }
-#else
-    
-    CGPoint point = [gesture translationInView:self];
-    CGFloat width = [UIScreen mainScreen].bounds.size.width;
-    CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    CGRect originalFrame = self.frame;
-    if (originalFrame.origin.x >= 0 && originalFrame.origin.x+originalFrame.size.width <= width) {
-        originalFrame.origin.x += point.x;
-    }
-    if (originalFrame.origin.y >= 0 && originalFrame.origin.y+originalFrame.size.height <= height) {
-        originalFrame.origin.y += point.y;
-    }
-    self.frame = originalFrame;
-    [gesture setTranslation:CGPointZero inView:self];
-    if (gesture.state == UIGestureRecognizerStateBegan) {
-        _btnSuspension.enabled = NO;
-    }else if (_btnSuspension.state == UIGestureRecognizerStateChanged){
-    } else {
-        CGRect frame = self.frame;
-        //记录是否越界
-        BOOL isOver = NO;
-        if (frame.origin.x < 0) {
-            frame.origin.x = 0;
-            isOver = YES;
-        } else if (frame.origin.x+frame.size.width > width) {
-            frame.origin.x = width - frame.size.width;
-            isOver = YES;
-        }
-        if (frame.origin.y < 0) {
-            frame.origin.y = 0;
-            isOver = YES;
-        } else if (frame.origin.y+frame.size.height > height) {
-            frame.origin.y = height - frame.size.height;
-            isOver = YES;
-        }
-        if (isOver) {
-            [UIView animateWithDuration:0.3 animations:^{
-                self.frame = frame;
-            }];
-        }
-        _btnSuspension.enabled = YES;
-    }
-#endif
 }
 
 - (void)onHitBtnTest:(id)sender
